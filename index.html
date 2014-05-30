@@ -1,0 +1,104 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>simple graph</title>
+	<link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<!-- 	//<script type="type/javascript" src="form.js"></script> -->
+
+
+
+
+
+<div id="top">
+<div class ="container">
+<div class="col-md-6 content" id="title">
+	<h1>fill out this simple form</h1>
+</div>
+<div class="col-md-3 content" id="description">
+	<h4>
+		A small form that takes input and displays the aggregates from all form inputs. It uses client side scripting (jquery and d3) and a little bit of php. Ajax is used so that you can submit the form and immediately see an immediate change in the scatterplot.
+	</h4>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src ="form.js">	
+</script>
+<script type="text/javascript">
+$(document).ready(function(){});
+</script>
+
+
+<div class="main">
+<div class="container">
+<!-- date and color not supported in all browsers -->
+<div id="firstinput" class="col-md-6 content">
+<form id="simpleform" name="input" >
+	<br />
+	first Name:
+	<input type="text" name="firstname" required>
+	<br />
+	last Name:
+	<input type="text" name="lastname" required>
+	<br />
+	email:
+	<input type="email" name="email" required>
+	<br />
+	dob:
+	<input id="dob" name="dob" type="date" min="1900-01-01" max="2013-01-01" required>
+	<br />
+	favorite color:
+	<input id="color" name="color" type="color" >
+	<br />
+	time spent on Internet per day:
+	<input type="number" min="1" max="24" step="1" value="1" name="internet" required>
+	<br />
+	which device do you use most often for internet usage?
+	<select id="mediumuse" name="medium">
+  		<option value="laptop">laptop</option>
+  		<option value="desktop">desktop</option>
+  		<option value="smartphone">smartphone</option>
+  		<option value="tablet">tablet</option>
+  		<option value="other">other</option>
+	</select>
+	<br />
+	is there such a thing as internet addiction?
+	<select id="internetaddiction" name="internetaddiction">
+  		<option value="yes">yes</option>
+  		<option value="no">no</option>
+  	</select>
+	<br />
+	time spent Outdoor per day on average:
+	<input type="number" min="1" max="24" step="1" value="1" name="outdoors" required>
+	<br />
+	<input type="submit" value="submit" name="submitbutton"  id="submitbutton">
+	<br />
+</form>
+<br />
+</div>
+<div id="graphhere" class="col-md-6 content">
+<div id="plotA"></div>
+<!-- Include jQuery and bootstrap JS plugins -->
+</div>
+
+</div>
+</div>
+<script src="includes/jquery/jquery-2.1.0.min.js"></script>
+<script src="includes/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
