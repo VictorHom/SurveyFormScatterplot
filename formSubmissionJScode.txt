@@ -1,0 +1,33 @@
+$(function ()
+{
+    // for each form on the page...
+    $("form").each(function ()
+    {
+        var that = $(this); // define context and reference
+
+        /* for each of the submit-inputs - in each of the forms on
+           the page - assign click and keypress event */
+        $("input:submit", that).bind("click keypress", function ()
+        {
+            // store the id of the submit-input on it's enclosing form
+            that.data("callerid", this.id);
+        });
+    });
+
+
+    // assign submit-event to all forms on the page
+    $("form").submit(function ()
+    {
+        /* retrieve the id of the input that was clicked, stored on
+           it's enclosing form */
+        var callerId = $(this).data("callerid");
+
+        // determine appropriate action(s)
+        if (callerId == "delete") // do stuff...
+
+        if (callerId == "change") // do stuff...
+
+        /* note: you can return false to prevent the default behavior
+           of the form--that is; stop the page from submitting */ 
+    });
+});

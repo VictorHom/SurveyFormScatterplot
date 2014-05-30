@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<head>
+<title>simple graph</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<!-- 	//<script type="type/javascript" src="form.js"></script> -->
+	<h1>fill out this simple form</h1>
+	<p>
+		A small project to show form input and displaying that aggregates from form inputs. It's only using client side scripting and a little bit of php is used. Ajax is used so that you can submit the form and immediately see a plot in the scatterplot.
+	</p>
+	<script type="text/javascript" src ="form.js">	
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){});
+	</script>
+<div id="firstinput">
+<form id="simpleform" name="input" >
+	<br />
+	first Name:
+	<input type="text" name="firstname" required></input>
+	<br />
+	last Name:
+	<input type="text" name="lastname" required></input>
+	<br />
+	email:
+	<input type="email" name="email" required></input>
+	<br />
+	dob:
+	<input id="dob" name="dob" type="date" min="1900-01-01" max="2013-01=01" required></input>
+	<br />
+	favorite color:
+	<input id="color" name="color" type="color" required></input>
+	<br />
+	time spent on Internet per day:
+	<input type="number" min="1" max="24" step="1" value="1" name="internet" required></input>
+	<br />
+	which device do you use most often for internet usage?
+	<select id="mediumuse" name="medium" required>
+  		<option value="laptop">laptop</option>
+  		<option value="desktop">desktop</option>
+  		<option value="smartphone">smartphone</option>
+  		<option value="tablet">tablet</option>
+  		<option value="other">other</option>
+	</select>
+	<br />
+	is there such a thing as internet addiction?
+	<select id="internetaddiction" name="internetaddiction" required>
+  		<option value="yes">yes</option>
+  		<option value="no">no</option>
+  	</select>
+	<br />
+	time spent Outdoor per day on average:
+	<input type="number" min="1" max="24" step="1" value="1" name="outdoors" required></input>
+	<br />
+	<input type="submit" value="submit" name="submitbutton"  id="submitbutton"></input>
+</form>
+
+</div>
+<div id="plotA"></div>
+</body>
+</html>
+
