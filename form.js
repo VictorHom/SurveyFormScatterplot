@@ -3,6 +3,7 @@ var points=[];
 var height = 400;
 var width = 400;
 
+
 var createGraph = function(){
 d3.json("data.json", function(data){
 
@@ -13,6 +14,7 @@ d3.json("data.json", function(data){
 	points = data;
 	var xScale = d3.scale.linear().domain([0, 24]).range([20, width-20]);
 	var yScale = d3.scale.linear().domain([0, 24]).range([height-20, 30]);
+
 	// points.forEach(function(e){
 
 	// 	// console.log(e);
@@ -20,7 +22,6 @@ d3.json("data.json", function(data){
 	var circles = svg.selectAll("circle").data(points);
 
 	circles.enter().append("circle").style("fill", "#ff7777").attr("r", 4);
-	
 
 
 
@@ -43,6 +44,7 @@ d3.json("data.json", function(data){
     .style("text-anchor", "middle")
     .text("Scatterplot: Time on Internet(x) v. Time Outdoors(y)");
 });
+
 };
 
 $(document).ready(function () {
@@ -52,9 +54,8 @@ createGraph();
 
 
 
+
 $('#simpleform').submit(function(){
-		ln=$(input[name="lastname"]).val();
-		fn=$(input[name="firstname"]).val();
 
 
 		var firstname =$(input[name="firstname"]).val();
@@ -99,6 +100,7 @@ $('#simpleform').submit(function(){
 	 	}
 
 	 });
+
 
 
 
